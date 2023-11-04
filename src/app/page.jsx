@@ -1,25 +1,22 @@
 import Link from 'next/link';
-
-import './page.scss';
+import Image from 'next/image';
 import AnimatePage from '@/components/AnimatePage';
+// import HomeBg from '@/components/homeBg/HomeBg';
+import mainImg from '@/assets/images/allaya-main.png';
+import './globals.scss';
 
 export default function Home() {
   return (
-    // <AnimatePresence mode="wait">
-    //   <motion.main
-    //     className="main"
-    //     initial={{ opacity: 0, y: 100 }}
-    //     animate={{ opacity: 1, y: 0 }}
-    //     exit={{ opacity: 0, y: 51 }}
-    //     transition={{ duration: 1 }}
-    //   >
     <AnimatePage>
-      <div className="main">
-        <Link href="/website">website</Link>
-      </div>
+      <section className="home">
+        {/* <HomeBg /> */}
+        <h1 className="home__title">
+          <Image src={mainImg} alt="logo" className="home__img" />
+        </h1>
+        <div className="home__links">
+          <Link href="/website">website</Link>
+        </div>
+      </section>
     </AnimatePage>
-
-    //   </motion.main>
-    // </AnimatePresence>
   );
 }

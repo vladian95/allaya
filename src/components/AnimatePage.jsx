@@ -1,8 +1,7 @@
 'use client';
 
-import Home from '@/app/page';
-import Website from '@/app/website/page';
 import { AnimatePresence, motion } from 'framer-motion';
+
 const animations = {
   initial: { opacity: 0, y: 100 },
   animate: { opacity: 1, y: 0 },
